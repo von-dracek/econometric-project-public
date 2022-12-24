@@ -109,9 +109,9 @@ def _lgbm_objective(
     normalized_value_counts = y_train.value_counts(normalize=True)
     class_weight = 1 / normalized_value_counts
     class_weight = dict(zip([x[0] for x in class_weight.index], class_weight))
-    #to run predefined distributino, use the below use_predefined_distribution flag
-    #to run balanced distribution, use is_unbalance=True
-    #to run unbalanced distribution, use is_unbalance=False without class weight
+    # to run predefined distributino, use the below use_predefined_distribution flag
+    # to run balanced distribution, use is_unbalance=True
+    # to run unbalanced distribution, use is_unbalance=False without class weight
     use_predefined_distribution = True
     if use_predefined_distribution:
         normalized_value_counts.index = [x[0] for x in normalized_value_counts.index]
@@ -198,7 +198,7 @@ def hyperparam_opt_svm(train_dataset, val_dataset):
     func = lambda trial: _svm_objective(  # noqa: E731
         trial, X_train, y_train, X_val, y_val, categorical_cols, oh
     )
-    study.optimize(func, show_progress_bar=True, n_jobs=1, timeout=8*3600)
+    study.optimize(func, show_progress_bar=True, n_jobs=1, timeout=8 * 3600)
     return study
 
 
@@ -226,7 +226,7 @@ def _svm_objective(
     n_iter_no_change = 50
     trial.set_user_attr("random_state", random_state)
     trial.set_user_attr("verbose", verbose)
-    #use the class_weight = "balanced" for balanced svm
+    # use the class_weight = "balanced" for balanced svm
     # trial.set_user_attr("class_weight", class_weight)
     trial.set_user_attr("loss", loss)
     trial.set_user_attr("n_jobs", n_jobs)
@@ -374,7 +374,9 @@ def generate_feature_importance(model, evaluation_metrics):
 def generate_confusion_matrix_plot(confusion_matrix):
     target_names = ["A", "B", "C", "D", "E", "F", "G"]
     cmn = confusion_matrix.astype("float") / confusion_matrix.sum(axis=1)[:, np.newaxis]
-    conf_matrix = sn.heatmap(cmn, annot=True, xticklabels=target_names, yticklabels=target_names, vmin=0, vmax=1)
+    conf_matrix = sn.heatmap(
+        cmn, annot=True, xticklabels=target_names, yticklabels=target_names, vmin=0, vmax=1
+    )
     conf_matrix.set(xlabel="Predicted class", ylabel="Target class")
     conf_matrix_figure = conf_matrix.figure
     return conf_matrix_figure
