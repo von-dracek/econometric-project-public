@@ -16,17 +16,6 @@ from barclays_project.pipelines.data_science.ranked_probability_score import (
     ranked_probability_score,
 )
 
-# Onehotting - didnt work very well
-#     categorical_cols = categorical_cols.difference({"LOCAL_AUTHORITY_LABEL"})
-#     oh = OneHotEncoder()
-#     transformed = oh.fit_transform(X_train[categorical_cols].to_numpy())
-#     logging.info(f"Onehotted large dataset")
-#     ohe_df = pd.DataFrame(transformed, columns=oh.get_feature_names())
-#     # concat with original data
-#     logging.info(f"One hot transformed to pandas")
-#     data = pd.concat([X_train, ohe_df], axis=1).drop(categorical_cols, axis=1)
-#     logging.info(f"Conccated large dataset")
-
 
 def subselect_features(X: pd.DataFrame, y: pd.DataFrame, categorical_cols: List[str]):
     categorical_cols = set(categorical_cols)
@@ -49,7 +38,7 @@ def subselect_features(X: pd.DataFrame, y: pd.DataFrame, categorical_cols: List[
         "POSTCODE_PROPORTIONS_ARE_RELIABLE_IND",
     ]
     small_dataset_X = X[cols_small]
-    # dropping two variables that had very high impact on the prediction
+    # dropping variables that had very high impact on the prediction
     # - probably criteria for classification into
     # one of the classes?
     large_cols = set(X.columns).difference(
@@ -237,6 +226,7 @@ def _svm_objective(
     n_iter_no_change = 50
     trial.set_user_attr("random_state", random_state)
     trial.set_user_attr("verbose", verbose)
+    #use the class_weight = "balanced" for balanced svm
     # trial.set_user_attr("class_weight", class_weight)
     trial.set_user_attr("loss", loss)
     trial.set_user_attr("n_jobs", n_jobs)
@@ -314,8 +304,6 @@ def predict_from_svm_model_on_test_set(test_dataset, model, standard_scaler, oh)
         if isinstance(X_test[col].dtype, pd.CategoricalDtype):
             X_test[col] = X_test[col].astype(int)
 
-    # categorical_columns = list(X_test.select_dtypes('int64').columns)
-    # numerical_columns = list(set(X_test.columns).difference(set(categorical_columns)))
     numerical_columns = list(standard_scaler.get_feature_names_out())
     X_test[numerical_columns] = standard_scaler.transform(X_test[numerical_columns])
 
@@ -371,7 +359,6 @@ def evaluate(dataset_containing_y_target, y_pred: pd.DataFrame):
         class_report[f"{tar}"]["ranked_probability_score"] = rps[tar]
     logging.info(f"Classification report {class_report}")
     conf_matrix = confusion_matrix(y_target, predicted_classes)
-    # cmn = conf_matrix.astype("float") / conf_matrix.sum(axis=1)[:, np.newaxis]
     return class_report, conf_matrix
 
 
