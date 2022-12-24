@@ -1,0 +1,284 @@
+data_science.baseline_model_small:
+  filepath: data/06_models/baseline_model_small.pickle
+  type: pickle.PickleDataSet
+data_science.cat_cols_exported:
+  filepath: data/05_model_input/cat_cols_exported.json
+  type: json.JSONDataSet
+data_science.cat_cols_exported_small:
+  filepath: data/05_model_input/cat_cols_exported_small.json
+  type: json.JSONDataSet
+data_science.cat_to_int_mappings_exported:
+  filepath: data/05_model_input/cat_to_int_mappings_exported.json
+  type: json.JSONDataSet
+data_science.cat_to_int_mappings_exported_small:
+  filepath: data/05_model_input/cat_to_int_mappings_exported_small.json
+  type: json.JSONDataSet
+data_science.confusion_matrix_baseline_model:
+  filepath: data/08_reporting/confusion_matrix_baseline_model.pickle
+  type: pickle.PickleDataSet
+data_science.confusion_matrix_baseline_model_small:
+  filepath: data/08_reporting/confusion_matrix_baseline_model_small.pickle
+  type: pickle.PickleDataSet
+data_science.confusion_matrix_lgbm:
+  filepath: data/08_reporting/confusion_matrix_lgbm.pickle
+  type: pickle.PickleDataSet
+data_science.confusion_matrix_lgbm_small:
+  filepath: data/08_reporting/confusion_matrix_lgbm_small.pickle
+  type: pickle.PickleDataSet
+data_science.confusion_matrix_ordinal_regression_model_small:
+  filepath: data/08_reporting/confusion_matrix_ordinal_regression_model_small.pickle
+  type: pickle.PickleDataSet
+data_science.confusion_matrix_plot_baseline_model:
+  filepath: data/08_reporting/confusion_matrix_plot_baseline_model.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.confusion_matrix_plot_baseline_model_small:
+  filepath: data/08_reporting/confusion_matrix_plot_baseline_model_small.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.confusion_matrix_plot_lgbm:
+  filepath: data/08_reporting/confusion_matrix_plot_lgbm.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.confusion_matrix_plot_lgbm_small:
+  filepath: data/08_reporting/confusion_matrix_plot_lgbm_small.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.confusion_matrix_plot_ordinal_regression_model_small:
+  filepath: data/08_reporting/confusion_matrix_plot_ordinal_regression_model_small.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.confusion_matrix_plot_svm:
+  filepath: data/08_reporting/confusion_matrix_plot_svm.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.confusion_matrix_plot_svm_small:
+  filepath: data/08_reporting/confusion_matrix_plot_svm_small.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.confusion_matrix_svm:
+  filepath: data/08_reporting/confusion_matrix_svm.pickle
+  type: pickle.PickleDataSet
+data_science.confusion_matrix_svm_small:
+  filepath: data/08_reporting/confusion_matrix_svm_small.pickle
+  type: pickle.PickleDataSet
+data_science.evaluation_metric:
+  filepath: data/08_reporting/evaluation_metric.pickle
+  type: pickle.PickleDataSet
+data_science.evaluation_metrics_baseline_model_small:
+  filepath: data/08_reporting/evaluation_metrics_baseline_model_small.pickle
+  type: pickle.PickleDataSet
+data_science.evaluation_metrics_baseline_model_small_df:
+  filepath: data/07_model_output/evaluation_metrics_baseline_model_small_df.csv
+  save_args:
+    index: true
+  type: pandas.CSVDataSet
+data_science.evaluation_metrics_baseline_model_small_scalars:
+  filepath: data/07_model_output/evaluation_metrics_baseline_model_small_scalars.csv
+  save_args:
+    index: true
+  type: pandas.CSVDataSet
+data_science.evaluation_metrics_lgbm:
+  filepath: data/08_reporting/evaluation_metrics_lgbm.pickle
+  type: pickle.PickleDataSet
+data_science.evaluation_metrics_lgbm_df:
+  filepath: data/07_model_output/evaluation_metrics_lgbm_df.csv
+  save_args:
+    index: true
+  type: pandas.CSVDataSet
+data_science.evaluation_metrics_lgbm_scalars:
+  filepath: data/07_model_output/evaluation_metrics_lgbm_scalars.csv
+  save_args:
+    index: true
+  type: pandas.CSVDataSet
+data_science.evaluation_metrics_lgbm_small:
+  filepath: data/08_reporting/evaluation_metrics_lgbm_small.pickle
+  type: pickle.PickleDataSet
+data_science.evaluation_metrics_lgbm_small_df:
+  filepath: data/07_model_output/evaluation_metrics_lgbm_small_df.csv
+  save_args:
+    index: true
+  type: pandas.CSVDataSet
+data_science.evaluation_metrics_lgbm_small_scalars:
+  filepath: data/07_model_output/evaluation_metrics_lgbm_small_scalars.csv
+  save_args:
+    index: true
+  type: pandas.CSVDataSet
+data_science.evaluation_metrics_ordinal_regression_model_small:
+  filepath: data/08_reporting/evaluation_metrics_ordinal_regression_model_small.pickle
+  type: pickle.PickleDataSet
+data_science.evaluation_metrics_ordinal_regression_model_small_df:
+  filepath: data/07_model_output/evaluation_metrics_ordinal_regression_model_small_df.csv
+  save_args:
+    index: true
+  type: pandas.CSVDataSet
+data_science.evaluation_metrics_ordinal_regression_model_small_scalars:
+  filepath: data/07_model_output/evaluation_metrics_ordinal_regression_model_small_scalars.csv
+  save_args:
+    index: true
+  type: pandas.CSVDataSet
+data_science.evaluation_metrics_svm:
+  filepath: data/08_reporting/evaluation_metrics_svm.pickle
+  type: pickle.PickleDataSet
+data_science.evaluation_metrics_svm_small:
+  filepath: data/08_reporting/evaluation_metrics_svm_small.pickle
+  type: pickle.PickleDataSet
+data_science.evaluation_metrics_svm_small_df:
+  filepath: data/07_model_output/evaluation_metrics_svm_small_df.csv
+  save_args:
+    index: true
+  type: pandas.CSVDataSet
+data_science.evaluation_metrics_svm_small_scalars:
+  filepath: data/07_model_output/evaluation_metrics_svm_small_scalars.csv
+  save_args:
+    index: true
+  type: pandas.CSVDataSet
+data_science.feature_importance_lgbm:
+  filepath: data/08_reporting/feature_importance_lgbm.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.feature_importance_lgbm_small:
+  filepath: data/08_reporting/feature_importance_lgbm_small.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.gen_optimization_study_plot_lgbm:
+  filepath: data/08_reporting/gen_optimization_study_plot_lgbm.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.gen_optimization_study_plot_lgbm_small:
+  filepath: data/08_reporting/gen_optimization_study_plot_lgbm_small.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.gen_optimization_study_plot_svm_small:
+  filepath: data/08_reporting/gen_optimization_study_plot_svm_small.png
+  save_args:
+    format: png
+  type: kedro.extras.datasets.matplotlib.MatplotlibWriter
+data_science.lgbm_model:
+  filepath: data/06_models/lgbm_model.pickle
+  type: pickle.PickleDataSet
+data_science.lgbm_model_small:
+  filepath: data/06_models/lgbm_model_small.pickle
+  type: pickle.PickleDataSet
+data_science.lgbm_model_small_study:
+  filepath: data/06_models/lgbm_model_small_study.pickle
+  type: pickle.PickleDataSet
+data_science.lgbm_model_study:
+  filepath: data/06_models/lgbm_model_study.pickle
+  type: pickle.PickleDataSet
+data_science.predictions:
+  filepath: data/07_model_output/predictions.pickle
+  type: pickle.PickleDataSet
+data_science.predictions_baseline_model_small:
+  filepath: data/07_model_output/predictions_baseline_model_small.pickle
+  type: pickle.PickleDataSet
+data_science.predictions_lgbm:
+  filepath: data/07_model_output/predictions_lgbm.pickle
+  type: pickle.PickleDataSet
+data_science.predictions_lgbm_small:
+  filepath: data/07_model_output/predictions_lgbm_small.pickle
+  type: pickle.PickleDataSet
+data_science.predictions_ordinal_regression_model_small:
+  filepath: data/07_model_output/predictions_ordinal_regression_small.csv
+  type: pandas.CSVDataSet
+data_science.predictions_svm:
+  filepath: data/07_model_output/predictions_svm.pickle
+  type: pickle.PickleDataSet
+data_science.predictions_svm_small:
+  filepath: data/07_model_output/predictions_svm_small.pickle
+  type: pickle.PickleDataSet
+data_science.subselected_X_train:
+  filepath: data/03_primary/subselected_X_train.pickle
+  type: pickle.PickleDataSet
+data_science.subselected_X_val:
+  filepath: data/03_primary/subselected_X_val.pickle
+  type: pickle.PickleDataSet
+data_science.subselected_y_train:
+  filepath: data/03_primary/subselected_y_train.pickle
+  type: pickle.PickleDataSet
+data_science.subselected_y_val:
+  filepath: data/03_primary/subselected_y_val.pickle
+  type: pickle.PickleDataSet
+data_science.svm_model:
+  filepath: data/06_models/svm_model.pickle
+  type: pickle.PickleDataSet
+data_science.svm_model_small:
+  filepath: data/06_models/svm_model_small.pickle
+  type: pickle.PickleDataSet
+data_science.svm_model_small_study:
+  filepath: data/06_models/svm_model_small_study.pickle
+  type: pickle.PickleDataSet
+data_science.svm_model_study:
+  filepath: data/06_models/svm_model_study.pickle
+  type: pickle.PickleDataSet
+data_science.svm_oh:
+  filepath: data/06_models/svm_oh.pickle
+  type: pickle.PickleDataSet
+data_science.svm_oh_small:
+  filepath: data/06_models/svm_oh_small.pickle
+  type: pickle.PickleDataSet
+data_science.svm_standardscaler:
+  filepath: data/06_models/svm_standardscaler.pickle
+  type: pickle.PickleDataSet
+data_science.svm_standardscaler_small:
+  filepath: data/06_models/svm_standardscaler_small.pickle
+  type: pickle.PickleDataSet
+data_science.test_dataset:
+  filepath: data/04_feature/test_dataset.pickle
+  type: pickle.PickleDataSet
+data_science.test_dataset_small:
+  filepath: data/04_feature/test_dataset_small.pickle
+  type: pickle.PickleDataSet
+data_science.test_x_csv:
+  filepath: data/05_model_input/test_x_csv.csv
+  type: pandas.CSVDataSet
+data_science.test_x_csv_small:
+  filepath: data/05_model_input/test_x_csv_small.csv
+  type: pandas.CSVDataSet
+data_science.train_dataset:
+  filepath: data/04_feature/train_dataset.pickle
+  type: pickle.PickleDataSet
+data_science.train_dataset_small:
+  filepath: data/04_feature/train_dataset_small.pickle
+  type: pickle.PickleDataSet
+data_science.train_x_csv:
+  filepath: data/05_model_input/train_x_csv.csv
+  type: pandas.CSVDataSet
+data_science.train_x_csv_small:
+  filepath: data/05_model_input/train_x_csv_small.csv
+  type: pandas.CSVDataSet
+data_science.train_y_csv:
+  filepath: data/05_model_input/train_y_csv.csv
+  type: pandas.CSVDataSet
+data_science.train_y_csv_small:
+  filepath: data/05_model_input/train_y_csv_small.csv
+  type: pandas.CSVDataSet
+data_science.val_dataset:
+  filepath: data/04_feature/val_dataset.pickle
+  type: pickle.PickleDataSet
+data_science.val_dataset_small:
+  filepath: data/04_feature/val_dataset_small.pickle
+  type: pickle.PickleDataSet
+data_science.val_x_csv:
+  filepath: data/05_model_input/val_x_csv.csv
+  type: pandas.CSVDataSet
+data_science.val_x_csv_small:
+  filepath: data/05_model_input/val_x_csv_small.csv
+  type: pandas.CSVDataSet
+data_science.val_y_csv:
+  filepath: data/05_model_input/val_y_csv.csv
+  type: pandas.CSVDataSet
+data_science.val_y_csv_small:
+  filepath: data/05_model_input/val_y_csv_small.csv
+  type: pandas.CSVDataSet

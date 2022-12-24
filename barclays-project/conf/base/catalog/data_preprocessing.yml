@@ -1,0 +1,81 @@
+None:
+  type: MemoryDataSet
+X_test:
+  filepath: data/03_primary/X_test
+  type: pandas.CSVDataSet
+  load_args:
+    dtype: {% for categorical_col in [ 'TENURE', 'HOT_WATER_ENV_EFF', 'ENERGY_TARIFF', 'MAINHEAT_DESCRIPTION', 'MECHANICAL_VENTILATION', 'WINDOWS_ENERGY_EFF', 'WINDOWS_ENV_EFF', 'GLAZING', 'HOT_WATER_ENERGY_EFF', 'HOTWATER_DESCRIPTION', 'GLAZED_AREA', 'MAIN_FUEL', 'MAINS_GAS_FLAG', 'PROPERTY_TYPE', 'MAINHEAT_ENERGY_EFF', 'MAINHEAT_ENV_EFF', 'BUILT_FORM', 'LOCAL_AUTHORITY_LABEL' ]%}
+            {{ categorical_col}}: "category"
+            {% endfor %}
+X_train:
+  filepath: data/03_primary/X_train
+  type: pandas.CSVDataSet
+  load_args:
+    dtype: {% for categorical_col in ['TENURE', 'HOT_WATER_ENV_EFF', 'ENERGY_TARIFF', 'MAINHEAT_DESCRIPTION', 'MECHANICAL_VENTILATION', 'WINDOWS_ENERGY_EFF', 'WINDOWS_ENV_EFF', 'GLAZING', 'HOT_WATER_ENERGY_EFF', 'HOTWATER_DESCRIPTION', 'GLAZED_AREA', 'MAIN_FUEL', 'MAINS_GAS_FLAG', 'PROPERTY_TYPE', 'MAINHEAT_ENERGY_EFF', 'MAINHEAT_ENV_EFF', 'BUILT_FORM', 'LOCAL_AUTHORITY_LABEL']%}
+            {{ categorical_col }}: "category"
+            {% endfor %}
+X_val:
+  filepath: data/03_primary/X_val
+  type: pandas.CSVDataSet
+  load_args:
+    dtype: {% for categorical_col in [ 'TENURE', 'HOT_WATER_ENV_EFF', 'ENERGY_TARIFF', 'MAINHEAT_DESCRIPTION', 'MECHANICAL_VENTILATION', 'WINDOWS_ENERGY_EFF', 'WINDOWS_ENV_EFF', 'GLAZING', 'HOT_WATER_ENERGY_EFF', 'HOTWATER_DESCRIPTION', 'GLAZED_AREA', 'MAIN_FUEL', 'MAINS_GAS_FLAG', 'PROPERTY_TYPE', 'MAINHEAT_ENERGY_EFF', 'MAINHEAT_ENV_EFF', 'BUILT_FORM', 'LOCAL_AUTHORITY_LABEL' ]%}
+            {{ categorical_col}}: "category"
+            {% endfor %}
+categorical_cols:
+  filepath: data/03_primary/categorical_cols.pickle
+  type: pickle.PickleDataSet
+categorical_to_int_mappings:
+  filepath: data/03_primary/categorical_to_int_mappings.pickle
+  type: pickle.PickleDataSet
+downcasted_datasets:
+  dataset: pickle.PickleDataSet
+  filename_suffix: .pickle
+  path: data/02_intermediate/downcasted_datasets
+  type: barclays_project.extras.adjusted_partitioned_dataset.AdjustedPartitionedDataset
+parsed_datasets:
+  dataset: pickle.PickleDataSet
+  filename_suffix: .pickle
+  path: data/02_intermediate/parsed_datasets
+  type: barclays_project.extras.adjusted_partitioned_dataset.AdjustedPartitionedDataset
+preprocessed_dataset_concatted:
+  filepath: data/02_intermediate/preprocessed_dataset_concatted.pickle
+  type: pickle.PickleDataSet
+preprocessed_dataset_concatted_mapped_to_ints:
+  filepath: data/03_primary/preprocessed_dataset_concatted_mapped_to_ints.pickle
+  type: pickle.PickleDataSet
+preprocessed_dataset_concatted_subselected:
+  type: MemoryDataSet
+preprocessed_dataset_concatted_subselected_mapped_to_ints:
+  type: MemoryDataSet
+raw_dataset_partitioned:
+  dataset: pandas.CSVDataSet
+  filename_suffix: certificates.csv
+  path: data/01_raw/data/
+  type: barclays_project.extras.adjusted_partitioned_dataset.AdjustedPartitionedDataset
+stratification_cols:
+  type: MemoryDataSet
+unique_columns_by_partition:
+  dataset: pickle.PickleDataSet
+  filename_suffix: .pickle
+  path: data/01_raw/unique_columns_by_partition
+  type: barclays_project.extras.adjusted_partitioned_dataset.AdjustedPartitionedDataset
+unique_columns_in_all_partitions:
+  filepath: data/01_raw/unique_columns_union.pickle
+  type: pickle.PickleDataSet
+unique_values_by_column:
+  filepath: data/01_raw/unique_values_by_column.pickle
+  type: pickle.PickleDataSet
+unique_values_by_column_by_partition:
+  dataset: pickle.PickleDataSet
+  filename_suffix: .pickle
+  path: data/01_raw/unique_values_by_column
+  type: barclays_project.extras.adjusted_partitioned_dataset.AdjustedPartitionedDataset
+y_test:
+  filepath: data/03_primary/y_test
+  type: pandas.CSVDataSet
+y_train:
+  filepath: data/03_primary/y_train
+  type: pandas.CSVDataSet
+y_val:
+  filepath: data/03_primary/y_val
+  type: pandas.CSVDataSet
