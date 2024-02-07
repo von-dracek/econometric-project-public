@@ -21,6 +21,6 @@ increase the accuracy.
 
 ### Final presentation and report:
 
-[Barclays_project_presentation.pdf](data%2F08_reporting%2FBarclays_project_presentation.pdf)
+[Barclays_project_presentation.pdf](barclays-project%2Fdata%2F08_reporting%2FBarclays_project_presentation.pdf)
 
-[Barclays_project_report.pdf](data%2F08_reporting%2FBarclays_project_report.pdf)
+[Barclays_project_report.pdf](barclays-project%2Fdata%2F08_reporting%2FBarclays_project_report.pdf)
