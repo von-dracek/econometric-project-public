@@ -1,41 +1,26 @@
 # Energy rating project
 
-## How to install dependencies
+### Introduction
 
-Declare any dependencies in `src/requirements.txt` for `pip` installation and `src/environment.yml` for `conda` installation.
+Due to the changing climate and looming energy crisis, the energy efficiency of buildings
+is more important than it ever was before. Particularly, it might be a deciding factor
+when applying for mortgages in the UK in the future due to regulations, since according
+to Open Data Communities, close to 40% of the UK’s energy consumption and emissions
+are produced from the heating and usage of buildings.
+To manage risk well, banks need to be able to predict the energy rating for buildings
+for which the energy rating has not yet been determined.
 
-To install them, run:
 
-```
-pip install -r src/requirements.txt
-```
+Our task was to build a model that predicts the energy rating of a building based on
+available data. Particularly, we were tasked to compare several models that can be used
+to predict the energy rating and then choose the one with the best accuracy.
+Furthermore, the data that are available to the client are rather limited, containing
+only a few regressors. We were thus also tasked to identify potentially useful regressors
+that are not currently used by the client and that could be included in the model to
+increase the accuracy.
 
-## How to run your Kedro pipeline
+### Final presentation and report:
 
-You can run your Kedro project with:
+[Barclays_project_presentation.pdf](data%2F08_reporting%2FBarclays_project_presentation.pdf)
 
-```
-kedro run
-```
-
-## How to test your Kedro project
-
-Have a look at the file `src/tests/test_run.py` for instructions on how to write your tests. You can run your tests as follows:
-
-```
-kedro test
-```
-
-To configure the coverage threshold, go to the `.coveragerc` file.
-
-## Project dependencies
-
-To generate or update the dependency requirements for your project:
-
-```
-kedro build-reqs
-```
-
-This will `pip-compile` the contents of `src/requirements.txt` into a new file `src/requirements.lock`. You can see the output of the resolution by opening `src/requirements.lock`.
-
-After this, if you'd like to update your project requirements, please update `src/requirements.txt` and re-run `kedro build-reqs`.
+[Barclays_project_report.pdf](data%2F08_reporting%2FBarclays_project_report.pdf)
